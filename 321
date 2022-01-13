@@ -20,3 +20,10 @@ def first_last(arr,target):
             return[start, i]
     return[-1,-1]
     print(start,i)
+    
+    def fist_last(arr,target):
+    for pos in range(len(arr)):
+        if arr[pos] == target:
+            index = arr.index[pos]
+            return index
+fist_last(arr,target)
