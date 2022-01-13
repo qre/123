@@ -1,29 +1,13 @@
 arr = [2,4,5,5,5,5,5,7,9,9]
 target = [5]
-counter = 0
-index = 0
-i=0
-start=0
-#def fist_last(arr,target):
-    #for pos in range(len(arr)):
-       # if arr[pos] == target:
-            #index = arr.index[pos]
-#print(index)
 
 def first_last(arr,target):
     for i in range(len(arr)):
-        if arr[i] == target:
+       if arr[i] == target:
             start = i
-            print(start,i)
             while i+1<len(arr) and arr[i+1] == target:
                 i +=1
             return[start, i]
     return[-1,-1]
-    print(start,i)
-    
-    def fist_last(arr,target):
-    for pos in range(len(arr)):
-        if arr[pos] == target:
-            index = arr.index[pos]
-            return index
-fist_last(arr,target)
+first_last(arr,target)
+print(first_last(arr,target))
