@@ -1,0 +1,42 @@
+import scraper2
+import pytest
+import sys
+
+def test_html_text_text():
+    assert type(scraper2.html_text) is str
+
+def test_date_added():
+    assert scraper2.date_posted[0] == 'T'
+
+def job_desc_added():
+    assert scraper2.job_description[1] != None
+
+def company_name_working():
+    assert scraper2.company_name[1] == 'Apple'
+
+@pytest.mark.skipif(sys.version_info < (3,3), reason='dont run this test')
+def test_city_added():
+    assert scraper2.location[0] == 'P'
+
+
+def test_full_part_time_working():
+    assert scraper2.full_part_time[0] == 'F'
+
+def test_languages_output():
+    assert scraper2.languages[2] == 'English , German ,'
+
+def test_more_info_output():
+    assert scraper2.more_info[1] != None
+
+def test_csvfile():
+    assert scraper2.expats_data() != None
+
+# @pytest.mark.parametrize('arg1, arg2, result', 
+#         [
+#             (10.5, 25.5, 36),
+#             (7, 3, 10),
+#             ('Hello ', 'World', 'Hello World')
+#         ]           
+#         )       
+# def test_job_dict(arg1, arg2, result):
+#     assert scraper2.job_dict(arg1, arg2) == result
